@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.main-wrapper {
+    margin: 50px auto;
+    width: 80%; /* Centralized container */
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.main-wrapper h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+hr {
+    margin: 20px 0;
+    border-color: #0078d4;
+    opacity: 0.3; /* Slightly higher opacity */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: #ffffff;
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005fa3; /* Darker blue on hover */
+}
+
+#btnAllDelete {
+    background-color: #ff4d4d; /* Red for delete all */
+    float: right;
+}
+
+#btnAllDelete:hover {
+    background-color: #d40000; /* Darker red on hover */
+}
+
+/* Panels and Layout */
+.panels-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; /* Space between the panels */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.left-panel, .right-panel {
+    width: 48%;
+    margin-bottom: 30px; /* Spacing between panels */
+}
+
+.cardbox {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 10px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+input[type="text"] {
+    width: calc(50% - 14px); /* Dynamic width for side-by-side inputs */
+    padding: 10px;
+    margin: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+.input-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows input fields to wrap on small screens */
+    justify-content: space-between;
+}
+
+p {
+    color: #333;
+    font-weight: 600;
+}
+
+#lsOutput, #readedDataHere, #autoFILL {
+    font-size: 1rem;
+    color: #0078d4;
+    margin-top: 10px;
+    white-space: pre-wrap; /* Preserves formatting for displayed text */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .panels-wrap {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%; /* Full width on small screens */
+    }
+
+    input[type="text"] {
+        width: 100%; /* Full width for inputs */
+    }
+}
